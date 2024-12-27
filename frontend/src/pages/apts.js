@@ -13,13 +13,11 @@ const Apts = () => {
 
   const [button, setButton] = useState(false);
 
-  const backend_url = process.env.BACKEND_URL;
-
-  console.log(backend_url);
+  const backend_url = "";
 
   useEffect(() => {
     const fetchApts = async () =>
-      await fetch(`${process.env.BACKEND_URL}/get-apts`, {
+      await fetch(`${backend_url}/get-apts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

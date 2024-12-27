@@ -8,6 +8,11 @@ var cors = require("cors");
 
 app.use(express.json());
 app.use(cors({ origin: "*" }));
+
+app.post("/hi", (req, res) => {
+  res.status(200).send("hi");
+});
+
 app.post("/add-apt", async (req, res) => {
   try {
     console.log(req.body);
