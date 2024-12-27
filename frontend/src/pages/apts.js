@@ -13,9 +13,13 @@ const Apts = () => {
 
   const [button, setButton] = useState(false);
 
+  const backend_url = process.env.BACKEND_URL;
+
+  console.log(backend_url);
+
   useEffect(() => {
     const fetchApts = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/get-apts", {
+      await fetch(`${process.env.BACKEND_URL}/get-apts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

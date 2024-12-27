@@ -22,7 +22,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     const fetchApts = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/get-user-apts", {
+      await fetch(`${process.env.BACKEND_URL}/get-user-apts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -36,7 +36,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     const fetchUser = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/get-user", {
+      await fetch(`${process.env.BACKEND_URL}/get-user`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -50,7 +50,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     const addApt = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/add-user-apt", {
+      await fetch(`${process.env.BACKEND_URL}/add-user-apt`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
