@@ -52,9 +52,11 @@ const AptDetail = () => {
     border: "none",
   };
 
+  const backend_url = 'https://n2j-backend.vercel.app';
+
   useEffect(() => {
     const fetchApt = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/get-apt", {
+      await fetch(`${backend_url}/get-apt`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -72,7 +74,7 @@ const AptDetail = () => {
     const dateTime = Date.now();
     const timestamp = Math.floor(dateTime / 1000);
     const postReview = async () =>
-      await fetch("https://n2j-project-backend.vercel.app/add-review", {
+      await fetch(`${backend_url}/add-review`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -8,6 +8,17 @@ var cors = require("cors");
 
 app.use(express.json());
 app.use(cors({ origin: "*" }));
+
+app.post("/hi", async (req, res) => {
+  try {
+    res.status(200).send("hi");
+  }
+  catch (error) {
+    console.error("Error adding entry:", error);
+    res.status(500).send({ error: "Error adding entry" });
+  }
+});
+
 app.post("/add-apt", async (req, res) => {
   try {
     console.log(req.body);
