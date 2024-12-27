@@ -13,7 +13,7 @@ const Apts = () => {
 
   const [button, setButton] = useState(false);
 
-  const backend_url = "";
+  const backend_url = 'https://n2j-backend.vercel.app';
 
   useEffect(() => {
     const fetchApts = async () =>

@@ -20,9 +20,11 @@ const UserInfo = () => {
 
   const email = window.localStorage.getItem("username");
 
+  const backend_url = "https://n2j-backend.vercel.app";
+
   useEffect(() => {
     const fetchApts = async () =>
-      await fetch(`${process.env.BACKEND_URL}/get-user-apts`, {
+      await fetch(`${backend_url}/get-user-apts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -36,7 +38,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     const fetchUser = async () =>
-      await fetch(`${process.env.BACKEND_URL}/get-user`, {
+      await fetch(`${backend_url}/get-user`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -50,7 +52,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     const addApt = async () =>
-      await fetch(`${process.env.BACKEND_URL}/add-user-apt`, {
+      await fetch(`${backend_url}/add-user-apt`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
