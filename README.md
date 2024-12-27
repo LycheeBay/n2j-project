@@ -2,6 +2,8 @@
 
 This is our project that provides UT students with an application that helps them identify housing options in line with their needs.
 
+This project is complete with user identity management and Google Firebase storage for apartment information.
+
 ## Getting Started
 
 The project has a NodeJS-based backend (in `/backend`) and a React-based frontend (in `/frontend`). The backend is responsible for fetching data from the database and providing it to the frontend. The frontend is responsible for displaying the data to the user and allowing them to interact with it. For the backend, the private
